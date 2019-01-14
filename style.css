@@ -3,11 +3,149 @@ html {
   height: 100%;
   margin: 0;
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.8em;
   color: #666;
+  background-color: #f2eeee;
 }
+
+/* NAVBAR CSS
+
+*/
+
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  color: orangered;
+  font-family: cursive;
+  font-weight: 700;
+}
+
+nav.main-navigation {
+  position: relative;
+  background-color:black;
+}
+
+nav.main-navigation ul.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  text-align: right;
+}
+
+.nav-list li.nav-list-item {
+  display: inline-block;
+  line-height: 40px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+a.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  color: #404040;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.nav-list li {
+  animation: FadeIn 1s cubic-bezier(0.65, 0.05, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+.nav-list li:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.nav-list li:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.nav-list li:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.nav-list li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.nav-list li:nth-child(5) {
+  animation-delay: 1.5s;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+
+/* css for PARALEXX IMAGES
+
+*/
 
 .pimg1,
 .pimg2,
@@ -118,6 +256,14 @@ a.link:hover {
 
 .footimg {
   width: 5rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+
+  /* Set the fixed height of the footer here */
+  height: 60px;
 }
 
 /*Google Fonts*/
@@ -419,106 +565,6 @@ i.box-circle-solid {
   z-index: 1;
 }
 
-/* ========== Copy Content Styles ========== */
-.copy-content-sec {
-  float: left;
-  width: 100%;
-  padding: 5rem 0;
-  position: relative;
-  z-index: 1;
-}
-.copy-container {
-  display: flex;
-  align-items: center;
-}
-.copy-content {
-  float: left;
-  width: 100%;
-}
-.copy-content li i {
-  float: left;
-  width: 30px;
-  margin-top: 5px;
-  color: #5cb85c;
-}
-
-/* ========== Team Section ========== */
-
-.team-section {
-  float: left;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-.team-footer {
-  float: left;
-  width: 100%;
-  padding: 15px;
-}
-.team-footer h3 {
-  font-size: 1.5rem;
-  text-transform: capitalize;
-}
-.member-box {
-  width: 100%;
-  float: left;
-  position: relative;
-  overflow: hidden;
-}
-.member-box:hover > img {
-  transform: scale(1.05);
-  transition: 1s ease-in;
-}
-.member-box img {
-  transition: 0.3s ease-in;
-}
-.member-box.t-bottom .overlay-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-.member-box.t-center .overlay-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.member-box i.box-circle-solid {
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-}
-/* style 1 */
-.member-box.anim-lf .overlay-content {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-  left: -100%;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.4s ease-in;
-}
-.member-box.anim-lf:hover > .overlay-content {
-  left: 0;
-  transition: 0.4s ease-in;
-}
-/* style 1 */
-.member-box.anim-bt .overlay-content {
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.6);
-  bottom: -100%;
-  width: 100%;
-  height: 100%;
-  transition: 0.6s ease-in;
-}
-
-.member-box.anim-bt:hover > .overlay-content {
-  bottom: 0;
-  transition: 0.4s ease-in;
-}
-
 /* ========== Footer Section ========== */
 
 /* ========== Copy Content Styles ========== */
@@ -553,33 +599,6 @@ i.box-circle-solid {
 .faq-box .card-header {
   background-color: #35cbdf;
   color: #fff;
-}
-
-/* ========== Price Table Styles ========== */
-.price-section {
-  float: left;
-  width: 100%;
-  padding: 5rem 0;
-  position: relative;
-  z-index: 1;
-}
-.price-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-.price-section .price-block {
-}
-.price-section .currency {
-  font-size: 25px;
-  vertical-align: super;
-}
-.price-section .price-count {
-  font-size: 60px;
-  line-height: 60px;
-}
-.price-section .price-block small {
-  display: block;
-  font-size: 15px;
 }
 
 /* ========== Contact Section ========== */
@@ -649,6 +668,8 @@ i.box-circle-solid {
   }
   .search-box {
     display: none;
+  }
+  .footer {
   }
 }
 
