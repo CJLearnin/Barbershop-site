@@ -11,36 +11,25 @@
     />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
   </head>
 
   <body>
-   <nav class="main-navigation">
-        <div class="navbar-header animated fadeInUp">
-
-            <img class="logo" src="images/logo.jpg" height="40"> MANOR PARK BARBERSHOP</a>
-
-        </div>
-        <ul class="nav-list">
-            <li class="nav-list-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-list-item">
-                <a href="#" class="nav-link">About Us</a>
-            </li>
-      
-            <li class="nav-list-item">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-        </ul>
-
-    </nav>
-</body>
+    <header class="header">
+      <a href="" class="logo">Manor Park Barbershop</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
 
     <div class="pimg1"><div class="ptext"></div></div>
 
@@ -160,36 +149,40 @@
       </div>
     </div>
 
-    <footer class="container-fluid text-center foot site-footer">
-      <div class="copyrights">
-        <p class="white-txt">
-          Your Site Name © 2018 <br />
-          <br />
-          <img class="footimg" src="images/logo.jpg" alt="Logo" />
-        </p>
-        <hr class="dark-line" />
-        <div class="container">
-          <a class="link" href="#">Contact Us</a>&nbsp
-          <a class="link" href="#">Privacy Policy</a>&nbsp
-          <a class="link" href="#">Terms & Conditions</a>
+    <section class="cd-section social-media">
+      <div class="container content-social">
+        <div class="about-page ">
+          <h3>Contact Us</h3>
+          <p>PHONE NUMBER HERE <i></i></p>
+          <p></p>
         </div>
-        <aside class="widget col-md-3 ">
-          <ul class="social-links">
+        <div class="social-media-button">
+          <ul>
             <li>
-              <a href="#"> <i class="fa fa-facebook"></i> </a>
+              <a class="linkedin" href=""
+                ><i class="fa fa-linkedin" aria-hidden="true"></i
+              ></a>
             </li>
             <li>
-              <a href="#"> <i class="fa fa-twitter"></i> </a>
+              <a class="github" href=""
+                ><i class="fa fa-github" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="facebook" href=""
+                ><i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" href=""
+                ><i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
             </li>
           </ul>
-        </aside>
-
-        <p class="white-txt small">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ornare
-          elit odio, eu imperdiet ligula ullamcorper sed.
-        </p>
+        </div>
       </div>
-    </footer>
+    </section>
+    <footer class="footer"><p>© 2018. All Rights Reversed</p></footer>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="main.js"></script>
 
@@ -207,7 +200,5 @@
         var marker = new google.maps.Marker({ position: uluru, map: map });
       }
     </script>
-
-    
   </body>
 </html>
